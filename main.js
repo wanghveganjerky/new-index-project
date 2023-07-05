@@ -20,7 +20,9 @@ window.setActiveText = function (index) {
 
 
 document.querySelector('.menu-button').addEventListener('click', function() {
-  document.querySelector('.leftColumn').style.display = 'block';
+  const leftColumn = document.querySelector('.leftColumn');
+  leftColumn.style.display = 'block';
+  leftColumn.style.zIndex = '1000';  // Ensures left column overlays the right column
 });
 
 for (let i = 0; i < toggleButtons.length; i++) {
@@ -28,10 +30,13 @@ for (let i = 0; i < toggleButtons.length; i++) {
     setActiveText(i);
 
     if (window.innerWidth <= 768) {
-      document.querySelector('.leftColumn').style.display = 'none';
+      const leftColumn = document.querySelector('.leftColumn');
+      leftColumn.style.display = 'none';
+      leftColumn.style.zIndex = '0';  // Resets the zIndex back to default
     }
   });
 }
+
 
 
 $(document).ready(function() {

@@ -15,15 +15,14 @@ h1:left column menu button font
     display: block;
   }
 
-  .leftColumn {
+  .rightColumn {
+    display: block;  
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    display: none; /* Hidden by default, will be shown when menu button is clicked */
-    background-color: white;
+    left: 36vh;
+    top: 7%;
+    bottom: 0;
+    width: 70%;
+    overflow: hidden;
   }
 
   .rightColumnContainer {
