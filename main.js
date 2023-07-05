@@ -18,11 +18,21 @@ window.setActiveText = function (index) {
   }
 }
 
+
+document.querySelector('.menu-button').addEventListener('click', function() {
+  document.querySelector('.leftColumn').style.display = 'block';
+});
+
 for (let i = 0; i < toggleButtons.length; i++) {
   toggleButtons[i].addEventListener('click', function() {
     setActiveText(i);
+
+    if (window.innerWidth <= 768) {
+      document.querySelector('.leftColumn').style.display = 'none';
+    }
   });
 }
+
 
 $(document).ready(function() {
   $('.clickableImage').click(function() {

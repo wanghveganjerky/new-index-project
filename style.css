@@ -6,25 +6,32 @@ h1:left column menu button font
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 
 
+.menu-bar {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
-  .toggleBox:not(.active) {
-    display: none;
+  .menu-bar {
+    display: block;
   }
-  
-  .toggleBox {
-    width: 100%;
-    height: initial;
+
+  .leftColumn {
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: scroll;
-    border-right: initial;
-    z-index: 998;
-    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: none; /* Hidden by default, will be shown when menu button is clicked */
+    background-color: white;
+  }
+
+  .rightColumnContainer {
+    margin-top: 70px; /* Leave space for the menu bar */
   }
 }
+
+
 
 body {
   background-color: white;
